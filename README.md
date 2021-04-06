@@ -27,6 +27,7 @@ func calc(input string) {
          fmt.Println(res) 
      }
 }
+
 func main() {
      calc("2 + 2 * 2)
      calc("PI + 1.0")
