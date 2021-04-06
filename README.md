@@ -8,3 +8,34 @@ Simple calculator in Go!
 ```bash
 go get github.com/Rollylni/Gocalc
 ```
+
+## Example
+```go
+package example
+
+import (
+     "fmt"
+     gocalc "github.com/Rollylni/Gocalc"
+)
+
+func calc(input string) {
+     calc := gocalc.NewCalculator(input)
+     res, err := calc.Process()
+     if err != nil {
+         fmt.Println(err)
+     } else {
+         fmt.Println(res) 
+     }
+}
+func main() {
+     calc("2 + 2 * 2)
+     calc("PI + 1.0")
+     calc("1 + 24.00")
+}
+```
+Output
+```bash
+> 6
+> 4.141593
+> Operation error: Type Error!
+```
