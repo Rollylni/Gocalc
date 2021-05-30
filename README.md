@@ -24,12 +24,12 @@ func calc(input string) {
      if err != nil {
          fmt.Println(err)
      } else {
-         fmt.Println(res) 
+         fmt.Println(res.Value()) 
      }
 }
 
 func main() {
-     calc("2 + 2 * 2)
+     calc("2 + 2 * 2")
      calc("PI + 1.0")
      calc("1 + 24.00")
 }
